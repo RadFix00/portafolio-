@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+@layer components {
+  .btn-primary {
+    border-radius: calc(infinity * 1px);
+    background-color: green;
+    padding-inline: --spacing(15);
+    padding-block: --spacing(3);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-white);
+    box-shadow: var(--shadow-md);
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-green-700);
+      }
+    }
+  }
+}
+
+@keyframes fly-right-to-left {
+  0% { transform: translateX(100vw) translateY(0) scaleX(1); }
+  50% { transform: translateX(50vw) translateY(-20px) scaleX(1); }
+  100% { transform: translateX(-20vw) translateY(0) scaleX(1); }
+}
+
+.dragon-fly {
+  position: absolute;
+  top: 20%;
+  pointer-events: none; /* Para que no bloquee clics en los botones */
+  z-index: 15; /* Entre el fondo y el texto */
+  animation: fly-right-to-left 15s linear infinite;
+  opacity: 1; /* Sutil, que no distraiga */
+}
+
+body {
+  overflow-x: hidden;
+}
