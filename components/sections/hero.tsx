@@ -28,15 +28,14 @@ export default function Hero() {
   if (loading) return <div className="text-white font-mono p-10">Cargando telemetría...</div>;
 
   return (
-    <section >
-      <div className="flex" >
+    <section>
+      <div className="flex place-content-evenly gap-2 align-middle justify-center-safe">
         <div>
             <h2 className="text-4xl">Hola, soy Nicolás</h2>
-            <div>
-              <h1 className="text-6xl">Desarrollador Web & SysAdmin Junior</h1>
+            <div className="max-w-3xl">
+              <h1 className="text-8xl">Desarrollador Web & SysAdmin Junior</h1>
             </div>
-            <h3 className="text-4xl">Entusiasta de la tecnología, el hadware, los servidores y de las motos</h3> 
-          
+              <h3 className="text-4xl max-w-2xl text-bold">Entusiasta de la tecnología, el hadware, los servidores y de las motos</h3> 
             <div>
               <h1>boton we</h1>
             </div>
@@ -50,7 +49,7 @@ export default function Hero() {
           </div>
           <div>
             {data.map((service) => (
-              <div key={service.name} className="p-6 border border-slate-800 rounded-2xl bg-slate-900/40">
+              <div key={service.name} className="p-6 mb-2 border border-slate-800 rounded-2xl bg-slate-900/40">
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm font-mono font-bold">{service.name}</h3>
                   <div className={`h-3 w-3 rounded-full ${

@@ -32,7 +32,7 @@ export async function GET() {
         { name: "Portfolio", host: "192.168.10.100", port: 8080 },
         { name: "Minecraft Server", host: "feature-retention.gl.joinmc.link", port: 25565 },
         { name: "ServerHome", host: "192.168.10.100", port: 81 },
-        { name: "Qr.Listo", host: "192.168.10.100", port: 3002},
+        { name: "Qr.Listo", host: "192.168.10.100", port: 3000},
     ];
 
     const results = await Promise.all(
