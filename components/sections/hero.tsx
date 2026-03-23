@@ -11,7 +11,7 @@ export default function Hero() {
     const interval = setInterval(() => {
       setShowDragon(true);
       setTimeout(() => setShowDragon(false), 30000); // Ocultar después de que pase
-    }, 1000); // Que pase cada 1 minuto
+    }, 6000); // Que pase cada 1 minuto
     
     return () => clearInterval(interval);
   }, []);
@@ -42,11 +42,11 @@ export default function Hero() {
   
 
   return (
-    <section className="min-h-screen flex items-center justify-center text-white">
+    <section className="relative min-h-screen flex items-center justify-center text-white">
 
       {showDragon && (
         <img 
-          src="/img/drake.jpg" 
+          src="/img/drake.png" 
           className="dragon-fly w-100 md:w-200" 
           alt="Dragon Easter Egg" 
         />
@@ -57,7 +57,7 @@ export default function Hero() {
           src="/img/bg.jpg" 
           alt="Background" 
           fill 
-          className="blur-[1px]" 
+          className="blur-[2px]" 
           priority 
         />
       </div>

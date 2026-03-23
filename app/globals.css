@@ -18,9 +18,9 @@
 }
 
 @keyframes fly-right-to-left {
-  0% { transform: translateX(100vw) translateY(10vh) scaleX(3); }
-  50% { transform: translateX(30vw) translateY(10vh) scaleX(3); }
-  100% { transform: translateX(-80vw) translateY(10vh) scaleX(3); }
+  0% { transform: translateX(100vw) translateY(20vh) scaleX(3); }
+  50% { transform: translateX(30vw) translateY(20vh) scaleX(1); }
+  100% { transform: translateX(-80vw) translateY(20vh) scaleX(1); }
 }
 
 .dragon-fly {
