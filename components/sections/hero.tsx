@@ -25,11 +25,11 @@ export default function Hero() {
     return () => clearInterval(interval);
   }, []);
 
-  if (loading) return <div className="text-white font-mono p-10">Cargando telemetría...</div>;
+  if (loading) return <div className="text-black font-mono p-10">Cargando telemetría...</div>;
 
   return (
     <section>
-      <div className="flex place-content-evenly gap-2 align-middle justify-center-safe">
+      <div className="flex place-content-evenly gap-8 align-middle justify-center-safe">
         <div>
             <h2 className="text-4xl">Hola, soy Nicolás</h2>
             <div className="max-w-3xl">
@@ -40,8 +40,8 @@ export default function Hero() {
               <h1>boton we</h1>
             </div>
         </div>
-        <div >
-            <Image src="/img/pic-perfil.png" alt="Foto de perfil" width={500} height={700} />
+        <div className="bg-transparent">
+            <Image className="drop-shadow-xl" src="/img/pic-perfil.png" alt="Foto de perfil" loading="eager" width={500} height={700}/>
         </div>
         <div className="w-s">
           <div>
@@ -49,7 +49,7 @@ export default function Hero() {
           </div>
           <div>
             {data.map((service) => (
-              <div key={service.name} className="p-6 mb-2 border border-slate-800 rounded-2xl bg-slate-900/40">
+              <div key={service.name} className="p-6 mb-2 border border-slate-800 rounded-2xl bg-gray-70 ">
                 <div className="flex items-center justify-between">
                   <h3 className="text-sm font-mono font-bold">{service.name}</h3>
                   <div className={`h-3 w-3 rounded-full ${
