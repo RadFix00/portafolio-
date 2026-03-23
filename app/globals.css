@@ -18,18 +18,17 @@
 }
 
 @keyframes fly-right-to-left {
-  0% { transform: translateX(100vw) translateY(0) scaleX(1); }
-  50% { transform: translateX(50vw) translateY(-20px) scaleX(1); }
-  100% { transform: translateX(-20vw) translateY(0) scaleX(1); }
+  0% { transform: translateX(100vw) translateY(10vh) scaleX(3); }
+  50% { transform: translateX(30vw) translateY(10vh) scaleX(3); }
+  100% { transform: translateX(-80vw) translateY(10vh) scaleX(3); }
 }
 
 .dragon-fly {
   position: absolute;
-  top: 20%;
+  bottom: 1;
   pointer-events: none; /* Para que no bloquee clics en los botones */
   z-index: 15; /* Entre el fondo y el texto */
   animation: fly-right-to-left 15s linear infinite;
-  opacity: 1; /* Sutil, que no distraiga */
 }
 
 body {

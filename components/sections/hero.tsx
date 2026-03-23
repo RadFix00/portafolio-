@@ -10,8 +10,8 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowDragon(true);
-      setTimeout(() => setShowDragon(false), 15000); // Ocultar después de que pase
-    }, 6000); // Que pase cada 1 minuto
+      setTimeout(() => setShowDragon(false), 30000); // Ocultar después de que pase
+    }, 1000); // Que pase cada 1 minuto
     
     return () => clearInterval(interval);
   }, []);
@@ -47,7 +47,7 @@ export default function Hero() {
       {showDragon && (
         <img 
           src="/img/drake.jpg" 
-          className="dragon-fly w-32 md:w-64" 
+          className="dragon-fly w-100 md:w-200" 
           alt="Dragon Easter Egg" 
         />
       )}
@@ -57,10 +57,9 @@ export default function Hero() {
           src="/img/bg.jpg" 
           alt="Background" 
           fill 
-          className="blur-[2px]" 
+          className="blur-[1px]" 
           priority 
         />
-        {/* Overlay para mejorar legibilidad */}
       </div>
       
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-4 mt-10">
