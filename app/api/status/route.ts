@@ -30,9 +30,9 @@ const checkService = (host: string, port: number): Promise<boolean> => {
 export async function GET() {
     const services = [
         { name: "Portfolio", host: "192.168.10.100", port: 8080 },
-        { name: "Minecraft", host: "feature-retention.gl.joinmc.link", port: 25565 },
+        { name: "Minecraft Server", host: "feature-retention.gl.joinmc.link", port: 25565 },
         { name: "ServerHome", host: "192.168.10.100", port: 81 },
-        { name: "Qr.Listo", host: "192.168.10.100", port: 3000},
+        { name: "Qr.Listo", host: "192.168.10.100", port: 3002},
     ];
 
     const results = await Promise.all(

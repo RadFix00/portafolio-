@@ -28,28 +28,31 @@ export default function Hero() {
   if (loading) return <div className="text-white font-mono p-10">Cargando telemetría...</div>;
 
   return (
-    <section className="font-bold font-mono">
+    <section >
+      <div className="flex" >
         <div>
-            <h2>Hola, soy Nicolás</h2>
-            <h1>Desarrollador Web & SysAdmin</h1>
-            <h3>Entusiasta de la tecnología, el hadware, los servidores y de las motos</h3> 
-
+            <h2 className="text-4xl">Hola, soy Nicolás</h2>
+            <div>
+              <h1 className="text-6xl">Desarrollador Web & SysAdmin Junior</h1>
+            </div>
+            <h3 className="text-4xl">Entusiasta de la tecnología, el hadware, los servidores y de las motos</h3> 
+          
             <div>
               <h1>boton we</h1>
             </div>
         </div>
-        <div>
-            <Image src="/img/pic-perfil.JPEG" alt="Foto de perfil" width={300} height={300}  />
+        <div >
+            <Image src="/img/pic-perfil.png" alt="Foto de perfil" width={500} height={700} />
         </div>
         <div className="w-s">
           <div>
-            <h2 className="text-2xl font-bold mb-4">Estado de mis servicios</h2>
+            <h1 className="font-bold text-4xl mb-4">Estado de mis servicios</h1>
           </div>
           <div>
             {data.map((service) => (
               <div key={service.name} className="p-6 border border-slate-800 rounded-2xl bg-slate-900/40">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-bold">{service.name}</h3>
+                  <h3 className="text-sm font-mono font-bold">{service.name}</h3>
                   <div className={`h-3 w-3 rounded-full ${
                     service.status === 'online' ? 'bg-green-500 shadow-[0_0_10px_green]' : 'bg-red-500'
                   }`} />
@@ -63,6 +66,7 @@ export default function Hero() {
             ))}
           </div>
         </div>
+      </div>
     </section>
   );
 }
