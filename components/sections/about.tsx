@@ -26,13 +26,16 @@ export default function About () {
                 />
             </div>
 
-            <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-center gap-20 max-w-8xl">
+            <div className="relative z-10 w-full flex flex-col md:flex-row items-center gap-15 justify-center max-w-8xl">
 
                 <div>
-                    <Image className="drop-shadow-xl" src="/img/pic-perfil5.png" alt="Foto de perfil" loading="eager" width={500} height={700}/>
+                    <video autoPlay loop muted playsInline preload="auto" className="w-[50em] h-auto"> 
+                        <source src="/video/output.webm" type="video/webm" />
+
+                    </video>
                 </div>
 
-                <div className="flex justify-center align-middle ">
+                <div className="flex justify-center align-middle">
                    <div className="space-y-1">
                     {about.map((Line, index) => (
                         <div key={index} className="flex">
@@ -42,7 +45,7 @@ export default function About () {
                             px-2
                             py-2
                             font-bold
-                            text-[3rem]        
+                            text-[2rem]        
                             leading-[3rem]         
                             italic                 
                             transform          

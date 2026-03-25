@@ -2,13 +2,12 @@
 
 @layer components {
   .btn-primary {
-    border-radius: calc(infinity * 1px);
-    background-color: green;
-    padding-inline: --spacing(15);
-    padding-block: --spacing(3);
-    font-weight: var(--font-weight-semibold);
-    color: var(--color-white);
-    box-shadow: var(--shadow-md);
+    padding: 15px 60px;
+    margin-bottom: 2px;
+    border: 1px solid green;
+    backdrop-filter: blur(3px); 
+    border-radius: 3em;
+    background-color: transparent;
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-green-700);
@@ -16,6 +15,8 @@
     }
   }
 }
+
+
 
 @keyframes fly-right-to-left {
   0% { transform: translateX(100vw) translateY(20vh) scaleX(3); }
