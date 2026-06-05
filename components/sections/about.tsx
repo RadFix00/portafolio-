@@ -14,7 +14,7 @@ export default function About () {
 
 
     return (
-        <section className="relative min-h-screen flex flex-col items-center justify-center text-white overflow-hidden">
+        <section className="relative py-20 md:py-28 flex flex-col items-center justify-center text-white overflow-hidden">
 
             <div>
                 <Image 
@@ -26,7 +26,7 @@ export default function About () {
                 />
             </div>
 
-            <div className="relative z-10 w-full flex flex-col md:flex-row items-center gap-15 justify-center max-w-8xl">
+            <div className="relative w-full flex gap-15 justify-center">
 
                 <div>
                     <video autoPlay loop muted playsInline preload="auto" className="w-[50em] h-auto"> 

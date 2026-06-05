@@ -17,6 +17,11 @@
 }
 
 
+main {
+  background-color: rgb(0, 0, 0);
+}
+
+
 
 @keyframes fly-right-to-left {
   0% { transform: translateX(100vw) translateY(20vh) scaleX(3); }

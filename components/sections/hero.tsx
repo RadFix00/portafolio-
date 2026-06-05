@@ -4,7 +4,6 @@ import Image from "next/image";
 
 export default function Hero() { 
 
-
   const [showDragon, setShowDragon] = useState(false);
 
   useEffect(() => {
@@ -52,7 +51,7 @@ export default function Hero() {
 
       <div className="absolute inset-0 z-0">
         <Image 
-          src="/img/bg.jpg" 
+          src="/img/bg.png" 
           alt="Background" 
           fill 
           className="blur-[2px]" 
@@ -62,22 +61,23 @@ export default function Hero() {
       
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center gap-5 mt-10">
         <div className="">
-            <h2 className="text-4xl mb-4">Hola, soy Nicolás Rad</h2>
+            <h2 className="text-4xl mb-4'0">Hola, soy Nicolás Rad</h2>
             <div className="max-w-3xl mb-4">
               <h1 className="text-8xl">Desarrollador Web & SysAdmin Junior</h1>
             </div>
-              <h3 className="text-4xl max-w-2xl text-bold">Entusiasta de la tecnología, el hadware, los servidores y las motos</h3> 
+              <h3 className="text-4xl max-w-2xl font-semibold">Entusiasta de la tecnología, el hadware, los servidores y las motos</h3> 
             <div className="mt-5">
-              <button className="btn-primary">Proyectos</button>
+              <p>YANIS HPT GORDO MALPARIDO</p>
             </div>
+          
         </div>
-        <div>
+        <div className="">
             <Image className="drop-shadow-xl" src="/img/pic-perfil5.png" alt="Foto de perfil" loading="eager" width={500} height={700}/>
         </div>
         <div className="w-s ">
             <h2 className="text-3xl min-w-2xs text-center font-bold mb-4 font-mono">STATUS_SERVICES</h2>
             {data.map((service) => (
-              <div key={service.name} className="p-6 mb-2 border border-slate-800 rounded-2xl bg-gray-70 backdrop-blur-[3px]">
+              <div key={service.name} className="p-6 mb-2 border border-slate-800 rounded-2xl bg-gray-70 backdrop-blur-[6px] bg-white/10">
                 <div className="flex items-center justify-between ">
                   <h3 className="text-xl font-mono font-bold ">{service.name}</h3>
                   <div className={`h-3 w-3 rounded-full ${
