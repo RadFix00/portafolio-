@@ -59,7 +59,7 @@ export default function Projects() {
 
       <div className="mx-auto max-w-7xl relative">
         <div className="mb-14 text-center">
-          <h2 className="text-4xl font-bold md:text-6xl text-green-500 drop-shadow-[0_0_5px_green]">
+          <h2 className="text-4xl md:text-6xl font-black italic  text-green-500 drop-shadow-[0_0_5px_green]">
             Projects
           </h2>
 

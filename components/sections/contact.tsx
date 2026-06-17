@@ -1,0 +1,68 @@
+"use client";
+import { useEffect, useState } from "react";
+import Image from "next/image"; 
+
+export default function About () {
+
+    const about = [
+        "Disfruto entender como funcionan las cosas,",
+        "crear proyectos y montarlos en producción;",
+        "Ahora mismo estoy enfoncado en seguir creciendo",
+        "mis habilidades y mi experiencia como Desarrollador",
+        "buscando proyectos donde pueda aprender y aportar"
+    ];
+
+
+    return (
+        <section className="relative py-20 md:py-28 flex flex-col items-center justify-center text-white overflow-hidden">
+
+            <div>
+                <Image 
+                  src="/img/bg1.jpg" 
+                  alt="Background" 
+                  fill 
+                  className="blur-[2px]" 
+                  priority 
+                />
+            </div>
+
+            <div className="relative w-full flex gap-15 justify-center">
+
+                <div>
+                    <video autoPlay loop muted playsInline preload="auto" className="w-[50em] h-auto"> 
+                        <source src="/video/output.webm" type="video/webm" />
+
+                    </video>
+                </div>
+
+                <div className="flex justify-center align-middle">
+                   <div className="space-y-1">
+                    {about.map((Line, index) => (
+                        <div key={index} className="flex">
+                            <span className="
+                            bg-white
+                            text-black
+                            px-2
+                            py-2
+                            font-bold
+                            text-[2rem]        
+                            leading-[3rem]         
+                            italic                 
+                            transform          
+                            -skew-x-[20deg]
+                            ">
+                                <span className=" inline-block transform skew-x-[20deg] tracking-tight ">
+                                    {Line}
+                                </span>
+                            </span>
+                        </div>
+                    ))
+                    }
+
+                   </div>
+                </div>
+                
+            </div>
+        </section>
+    )
+}
